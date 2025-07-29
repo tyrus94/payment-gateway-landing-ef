@@ -1,30 +1,38 @@
-# Payment gateway landing page
+# Payment Gateway Landing Page
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+A modern, responsive landing page for a payment gateway service specializing in emerging markets and high-risk businesses.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/alexchimano-1993s-projects/v0-payment-gateway-landing-page)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/wNKFrLvBCrA)
+## Features
 
-## Overview
+- Responsive design optimized for all devices
+- Contact form with Formspree integration
+- Telegram integration for instant messaging
+- Support for 10+ countries with local payment methods
+- Modern UI with Tailwind CSS and shadcn/ui components
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+## Getting Started
+
+1. Install dependencies:
+\`\`\`bash
+npm install
+\`\`\`
+
+2. Run the development server:
+\`\`\`bash
+npm run dev
+\`\`\`
+
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Deployment
 
-Your project is live at:
+This project is optimized for deployment on Vercel. Simply connect your GitHub repository to Vercel for automatic deployments.
 
-**[https://vercel.com/alexchimano-1993s-projects/v0-payment-gateway-landing-page](https://vercel.com/alexchimano-1993s-projects/v0-payment-gateway-landing-page)**
+## Technologies Used
 
-## Build your app
-
-Continue building your app on:
-
-**[https://v0.dev/chat/projects/wNKFrLvBCrA](https://v0.dev/chat/projects/wNKFrLvBCrA)**
-
-## How It Works
-
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+- Next.js 14
+- React 18
+- TypeScript
+- Tailwind CSS
+- shadcn/ui
+- Lucide React Icons

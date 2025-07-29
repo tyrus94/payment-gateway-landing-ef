@@ -38,15 +38,6 @@ const FlagIcon = ({ country }: { country: string }) => {
   return <div className="text-4xl mb-2">{flagEmojis[country] || "🌍"}</div>
 }
 
-const EWalletBadge = ({ name, color }: { name: string; color: string }) => (
-  <span
-    className="inline-block px-3 py-1 rounded-full text-white text-sm font-medium mb-1"
-    style={{ backgroundColor: color }}
-  >
-    {name}
-  </span>
-)
-
 const SuccessMessage = ({ show, onClose }: { show: boolean; onClose: () => void }) => {
   if (!show) return null
   return (
@@ -310,83 +301,52 @@ export default function PaymentGatewayLanding() {
               {
                 country: "India",
                 key: "india",
-                methods: [
-                  { name: "UPI", color: "#FF6B35" },
-                  { name: "Paytm", color: "#00BAF2" },
-                  { name: "PhonePe", color: "#5F259F" },
-                ],
+                methods: ["UPI", "Paytm", "PhonePe"],
               },
               {
                 country: "Bangladesh",
                 key: "bangladesh",
-                methods: [
-                  { name: "Nagad", color: "#EB1C23" },
-                  { name: "bKash", color: "#E2136E" },
-                ],
+                methods: ["Nagad", "bKash"],
               },
               {
                 country: "Pakistan",
                 key: "pakistan",
-                methods: [
-                  { name: "JazzCash", color: "#8CC63F" },
-                  { name: "Easypaisa", color: "#7B68EE" },
-                ],
+                methods: ["JazzCash", "Easypaisa"],
               },
               {
                 country: "Kenya",
                 key: "kenya",
-                methods: [
-                  { name: "M-Pesa", color: "#00A651" },
-                  { name: "Airtel", color: "#FF0000" },
-                ],
+                methods: ["M-Pesa", "Airtel"],
               },
               {
                 country: "Brazil",
                 key: "brazil",
-                methods: [
-                  { name: "PIX", color: "#32BCAD" },
-                  { name: "PicPay", color: "#11C76F" },
-                ],
+                methods: ["PIX", "PicPay"],
               },
               {
                 country: "Egypt",
                 key: "egypt",
-                methods: [
-                  { name: "Vodafone", color: "#E60000" },
-                  { name: "Orange", color: "#FF7900" },
-                ],
+                methods: ["Vodafone", "Orange"],
               },
               {
                 country: "Thailand",
                 key: "thailand",
-                methods: [
-                  { name: "TrueMoney", color: "#FF6B35" },
-                  { name: "LINE Pay", color: "#00C300" },
-                ],
+                methods: ["TrueMoney", "LINE Pay"],
               },
               {
                 country: "Tanzania",
                 key: "tanzania",
-                methods: [
-                  { name: "M-Pesa", color: "#00A651" },
-                  { name: "Tigo", color: "#0066CC" },
-                ],
+                methods: ["M-Pesa", "Tigo"],
               },
               {
                 country: "Vietnam",
                 key: "vietnam",
-                methods: [
-                  { name: "MoMo", color: "#A50064" },
-                  { name: "ZaloPay", color: "#0068FF" },
-                ],
+                methods: ["MoMo", "ZaloPay"],
               },
               {
                 country: "Philippines",
                 key: "philippines",
-                methods: [
-                  { name: "GCash", color: "#007DFF" },
-                  { name: "PayMaya", color: "#00AEEF" },
-                ],
+                methods: ["GCash", "PayMaya"],
               },
             ].map((region, index) => (
               <Card key={index} className="text-center">
@@ -395,8 +355,8 @@ export default function PaymentGatewayLanding() {
                   <h3 className="font-bold text-lg mb-3">{region.country}</h3>
                   <div className="space-y-2">
                     {region.methods.map((method, idx) => (
-                      <div key={idx}>
-                        <EWalletBadge name={method.name} color={method.color} />
+                      <div key={idx} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                        {method}
                       </div>
                     ))}
                   </div>
